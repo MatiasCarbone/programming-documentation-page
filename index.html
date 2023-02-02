@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Basic Python Guide</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='styles.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <main id='main-doc'>
+      
+      <nav id='navbar'>
+        <img src='https://i.pinimg.com/originals/95/91/ed/9591ed82caa8d20c30db96cb7298d3a9.png' id='python-logo'>
+        <header id='maintitle'>Basic Python Guide</header>
+        <a class='nav-link' href='#Whitespace_and_indentation'>Whitespace and indentation</a>
+        <a class='nav-link' href='#Comments'>Comments</a>
+        <a class='nav-link' href='#Variables_in_Python'>Variables in Python</a>
+        <a class='nav-link' href='#Strings_in_Python'>Strings in Python</a>
+        <a class='nav-link' href='#Variable_Type_Integer'>Variable Type Integer</a>
+        <a class='nav-link' href='#Boolean_Data_Type'>Boolean Data Type</a>
+        <a class='nav-link' href='#Falsy_and_Truthy_Values'>Falsy and Truthy Values</a>
+        <a class='nav-link' href='#Variable_Type_Conversion'>Variable Type Conversion</a>
+        <a class='nav-link' href='#Python_comparison_operators'>Python comparison operators</a> 
+        <a class='nav-link' href='#Python_logical_operators'>Python logical operators</a> 
+        <a class='nav-link' href='#Reference'>Reference</a> 
+      </nav>
+
+      <div id='main'>
+      <section class='main-section' id='Whitespace_and_indentation'>
+        <header>Whitespace and indentation</header>
+        <p>If you’ve been working in other programming languages such as Java, C#, or C/C++, you know that these languages use semicolons (<code>;</code>) to separate the statements.</p>
+        <p>However, Python uses&nbsp;whitespace&nbsp;and indentation to construct the code structure.</p>
+        <p>The following shows a snippet of Python code:</p>
+
+        <pre class='codecontainer'>
+          <code>
+<span class='comment'># define main function to print out something</span>
+<span class='purple'>def</span> <span class='blue'>main</span>():
+    i = <span class='orange'>1</span>
+    max = <span class='orange'>10</span>
+    <span class='purple'>while</span> (i < max):
+        print(i)
+        i = i + <span class='orange'>1</span>
+<span class='comment'># call function main </span>
+main()
+          </code>
+        </pre>
+        
+        <p>The meaning of the code isn’t important to you now. Please pay attention to the code structure instead.</p>
+        <p>At the end of each line, you don’t see any semicolon to terminate the statement. And the code uses indentation to format the code.</p>
+        <p>By using indentation and&nbsp;whitespace to organize the code, Python code gains the following advantages:</p>
+        <ul>
+          <li>First, you’ll never miss the beginning or ending code of a block like in other programming languages such as Java or C#.</li>
+          <li>Second, the coding style is essentially uniform. If you have to maintain another developer’s code, that code looks the same as yours.</li><li>Third, the code is more readable and clear in comparison with other programming languages.</li>
+        </ul>
+
+      </section>
+      <hr>
+
+
+      <section class='main-section' id='Comments'>
+        <header>Comments</header>
+        <p>The comments are as important as the code because they describe why a piece of code was written.</p>
+        <p>When the Python interpreter executes the code, it ignores the comments.</p>
+        <p>In Python, a single-line comment begins with a hash (#) symbol followed by the comment. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+<span class='comment'># This is a single line comment in Python</span>
+          </code>
+        </pre>
+
+        <p>And Python also supports multi-line comments:</p>
+
+        <pre class='codecontainer'>
+          <code>
+<span class='comment'># Python multi-line comment with triple " characters</span>
+<span class='green'>
+""" increase salary base on rating and percentage
+    rating 1 - 2 no increase
+    rating 3 - 4 increase 5%
+    rating 4 - 6 increase 10% """</span>   
+          </code>
+        </pre>
+        
+      </section>
+      <hr>
+
+
+      <section class='main-section' id='Variables_in_Python'>
+        <header>Variables in Python</header>
+        <p>When you develop a program, you need to manage values, a lot of them. To store values, you use variables.</p>
+        <p>In Python, a variable is a label that you can assign a value to it. And a variable is always associated with a value. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+text = <span class='green'>"Hello World!"</span>
+            
+number = <span class='orange'>722690167</span>
+          </code>
+        </pre>
+
+        <p>The <span class='red'>=</span> is the assignment operator. In this syntax, you assign a value to the <span class='red'>variable_name</span>.</p>
+        <p>The value can be anything like a number, a string, etc., that you assign to the variable.</p>
+        <p>When you name a variable, you need to adhere to some rules. If you don’t, you’ll get an error.</p>
+        <ul>
+          <li>Variable names can contain only letters, numbers, and underscores (_). They can start with a letter or an underscore (_), not with a number.</li>
+          <li>Variable names cannot contain spaces. To separate words in variables, you use underscores for example <span class='red'>sorted_list</span>.</li>
+          <li>Variable names cannot be the same as keywords, reserved words, and built-in functions in Python.</li>
+        </ul>
+        <p>The following guidelines help you define good variable names:</p>
+        <ul>
+          <li>Variable names should be concise and descriptive. For example, the <span class='red'>active_user</span> variable is more descriptive than the <span class='red'>au</span>.</li>
+          <li>Use underscores (_) to separate multiple words in the variable names.</li>
+          <li>Avoid using the letter "l" and the uppercase letter "O" because they look like the number 1 and 0.</li>
+        </ul>
+        <p></p>
+      </section>
+      <hr>
+
+
+      <section class='main-section' id='Strings_in_Python'>
+        <header>Strings in Python</header>
+        <p>A string is a series of characters. In Python, anything inside quotes is a string. And you can use either single or double quotes. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+string_a = <span class='green'>'Some text'</span>
+string_b = <span class='green'>"Some more text"</span>
+          </code>
+        </pre>
+
+        <p>Sometimes, you want to use the values of variables in a string.</p>
+        <p>To do it, you place the letter <span class='red'>f</span> before the opening quotation mark and put the brace around the variable name. Python will replace the <span class='red'>{name}</span> by the value of the <span class='red'>name</span> variable:</p>
+        
+        <pre class='codecontainer'>
+          <code>
+name = <span class='green'>'John'</span>
+message = <span class='green'>f'Hi </span>{name}<span class='green'>'</span>
+          </code>
+        </pre>
+
+        <p>To concatenate two string variables, you use the operator <span class='red'>+</span>:</p>
+        <pre class='codecontainer'>
+          <code>
+string_a = <span class='green'>'Good '</span>
+string_a = <span class='green'>'Afternoon'</span>
+
+greeting = greeting + time + string_a = <span class='green'>'!'</span>
+print(greeting)
+
+<span class='comment'>#This code will output "Good Afternoon!"</span>
+          </code>
+        </pre>
+
+        <p>Since a string is a sequence of characters, you can access its elements using an index. The first character in the string has an index of zero.</p>
+        <p>The following example shows how to access elements using an index:</p>
+
+        <pre class='codecontainer'>
+          <code>
+str = <span class='green'>"Python String"</span>
+print(str[<span class='orange'>0</span>]) <span class='comment'># P</span>
+print(str[<span class='orange'>3</span>]) <span class='comment'># h</span>
+print(str[<span class='orange'>7</span>]) <span class='comment'># S</span>
+print(str[<span class='orange'>-1</span>]) <span class='comment'># g</span>
+          </code>
+        </pre>
+
+        <p>How it works:</p>
+        <ul>
+          <li>First, create a variable that holds a string <span class='red'>"Python String"</span>.</li>
+          <li>Then, access the first and second characters of the string by using the square brackets [] and indexes.</li>
+          <li>If you use a negative index, Python returns the character starting from the end of the string.</li>
+        </ul>
+        
+        <p>To get the length of a string, you use the <span class='red'>len()</span> function. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+str = <span class='green'>"Python String"</span>
+str_len = len(str)
+print(str_len)
+
+<span class='comment'># This code will output "13", which is the length of the "str" string.</span>
+          </code>
+        </pre>
+
+        <p>Slicing allows you to get a substring from a string. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+str = <span class='green'>"Python String"</span>
+print(str[<span class='orange'>0</span>:<span class='orange'>4</span>])
+<span class='comment'># This will output "Pyth"</span>
+
+print(str[<span class='orange'>8</span>:<span class='orange'>11</span>])
+<span class='comment'># This will output "tri"</span>
+          </code>
+        </pre>
+        <p>The <span class='red'>str[0:2]</span> returns a substring that includes the character from the index 0 (included) to 2 (excluded).</p>
+        <p>The substring always includes the character at the start and excludes the string at the end.</p>
+        <p>The start and end are optional. If you omit the start, it defaults to zero. If you omit the end, it defaults to the string’s length.</p>
+      </section>
+      <hr>
+
+
+      <section class='main-section' id='Variable_Type_Integer'>
+        <header>Variable Type Integer</header>
+        <p>The integers are numbers such as -1, 0, 1, 2, and 3, .. and they have type <span class='red'>int</span>.</p>
+        <p>You can use Math operators like +, -, *, and / to form expressions that include integers. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+>>> <span class='orange'>20</span> + <span class='orange'>10</span> <span class='comment'># =30</span>
+>>> <span class='orange'>20</span> - <span class='orange'>10</span> <span class='comment'># =10</span>
+>>> <span class='orange'>20</span> * <span class='orange'>10</span> <span class='comment'># =200</span>
+>>> <span class='orange'>20</span> / <span class='orange'>10</span> <span class='comment'># =2.0</span>
+>>> <span class='orange'>5</span> ** <span class='orange'>2</span> <span class='comment'># =25 (exponent)</span>
+          </code>
+        </pre>
+
+        <p>Any number with a decimal point is a floating-point number. The term float means that the decimal point can appear at any position in a number. In general, you can use floats like integers.</p>
+        <p>Due to the internal representation of floats, Python will try to represent the result as precisely as possible. However, you may get the result that you would not expect. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+>>> <span class='orange'>20</span> + <span class='orange'>10</span> 
+<span class='comment'># This operation equals 0.30000000000000004</span>
+          </code>
+        </pre>
+
+        <p>Just keep this in mind when you perform calculations with floats.</p>
+      </section>
+      <hr>
+
+      <section class='main-section' id='Boolean_Data_Type'>
+        <header>Boolean Data Type</header>
+        <p>In programming, you often want to check if a condition is true or not and perform some actions based on the result.</p>
+        <p>To represent true and false, Python provides you with the boolean data type. The boolean value has a technical name as <span class='red'>bool</span>.</p>
+        <p>The boolean data type has two values: <span class='red'>True</span> and <span class='red'>False</span>. Note that these values start with capital letters (<span class='red'>T</span>) and (<span class='red'>F</span>).</p>
+        <p>The following example defines two boolean variables:</p>
+
+        <pre class='codecontainer'>
+          <code>
+is_active = <span class='bool'>True</span>
+is_admin = <span class='bool'>False</span>
+          </code>
+        </pre>
+        
+        <p>When you compare two numbers, Python returns the result as a boolean value. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+>>> <span class='orange'>20</span> > <span class='orange'>10</span>
+<span class='bool'>True</span>
+>>> <span class='orange'>20</span> == <span class='orange'>10</span>
+<span class='bool'>False</span>
+          </code>
+        </pre>
+
+        <p>You can also compare variables and string literals.</p>
+      </section>
+      <hr>
+
+      <section class='main-section' id='Falsy_and_Truthy_Values'>
+        <header>Falsy and Truthy Values</header>
+        <p>When a value evaluates to <span class='red'>True</span>, it’s truthy. And if a value evaluates to <span class='red'>False</span>, it’s falsy.</p>
+        <p>The following are falsy values in Python:</p>
+        <ul>
+          <li>The number zero (0)</li>
+          <li>An empty string ''</li>
+          <li>False</li>
+          <li>None</li>
+          <li>An empty list []</li>
+          <li>An empty tuple ()</li>
+          <li>An empty dictionary {}</li>
+        </ul>
+        <p>The truthy values are the other values that aren’t falsy.</p>
+      </section>
+      <hr>
+      
+      <section class='main-section' id='Variable_Type_Conversion'>
+        <header>Variable Type Conversion</header>
+        <p>To get input from users, you use the <span class='red'>input()</span> function. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+value = input(<span class='green'>'Enter a value:'</span>)
+          </code>
+        </pre>
+        
+        <p>When you execute this code, it’ll prompt you for input on the Terminal. If you enter a value, for example, a number, the program will display that value back.</p>
+        <p>However, the <span class='red'>input()</span> function returns a string, not an integer.</p>
+        <p>If you wanted, for example, to ask the user to input two numbers and print the sum, you would need to convert the user input to integer type values before computing the sum (otherwise the program would throw an error).</p>
+        <p>To convert a string to a number, you use the <span class='red'>int()</span> function:</p>
+
+        <pre class='codecontainer'>
+          <code>
+price = input(<span class='green'>'Enter the price ($):'</span>)
+tax = input(<span class='green'>'Enter the tax rate (%):'</span>)
+
+net_price = int(price) * int(tax) / <span class='orange'>100</span>
+print(<span class='green'>f'The net price is $'</span> + net_price)
+          </code>
+        </pre> 
+
+        <p>If you run the program, and enter some values, you’ll see that it works correctly:</p>
+      
+
+        <pre class='codecontainer'>
+          <code>
+Enter the price ($):<span class='orange'>100</span>
+Enter the tax rate (%):<span class='orange'>10</span>
+The net price is $ <span class='orange'>10.0</span>
+          </code>
+        </pre> 
+
+        <p>Besides the <span class='red'>int(str)</span> functions, Python support other type conversion functions. The more important ones are:</p>
+        <ul>
+          <li><span class='red'>float(str)</span> – convert a string to a floating-point number.</li>
+          <li><span class='red'>bool(val)</span> – convert a value to a boolean value, either <span class='red'>True</span> or <span class='red'>False</span>.</li>
+          <li><span class='red'>str(val)</span> – return the string representation of a value.</li>
+        </ul>
+
+        <p>To get the type of a value, you use the type(value) function. For example:</p>
+
+        <pre class='codecontainer'>
+          <code>
+<span class='blue'>>>></span> type(<span class='orange'>100</span>)
+&ltclass 'int'&gt
+<span class='blue'>>>></span> type(<span class='orange'>2.0</span>)
+&ltclass 'float'&gt
+<span class='blue'>>>></span> type(<span class='green'>'Hello'</span>)
+&ltclass 'str'&gt
+<span class='blue'>>>></span> type(<span class='bool'>True</span>)
+&ltclass 'bool'&gt
+          </code>
+        </pre> 
+
+      </section>
+      <hr>
+
+
+      <section class='main-section' id='Python_comparison_operators'>
+        <header>Python comparison operators</header>
+
+        <p>In programming, you often want to compare a value with another value. To do that, you use comparison operators.</p>
+        <p>Python has six comparison operators, which are as follows:</p>
+        <ul>
+          <li>Less than (<span class='red'><</span>)</li>
+          <li>Less than or equal to (<span class='red'><=</span>)</li>
+          <li>Greater than (<span class='red'>></span>)</li>
+          <li>Greater than or equal to (<span class='red'>>=</span>)</li>
+          <li>Equal to (<span class='red'>==</span>)</li>
+          <li>Not equal to (<span class='red'>!=</span>)</li>
+        </ul>
+        <p>These comparison operators compare two values and return a boolean value, either <span class='red'>True</span> or <span class='red'>False</span>. And you can use these comparison operators to compare both numbers and strings:</p>
+
+        <pre class='codecontainer'>
+          <code>
+b = 32
+
+<span class='green'>'Hello'</span> == <span class='green'>'Hello'</span> <span class='comment'># Returns True</span>
+<span class='orange'>71</span> > <span class='orange'>68</span> <span class='comment'># Returns True</span>
+<span class='orange'>22</span> <= <span class='orange'>17</span> <span class='comment'># Returns False</span>
+<span class='orange'>32</span> != b <span class='comment'># Returns False</span>
+          </code>
+        </pre> 
+        
+      </section>
+      <hr>
+
+
+      <section class='main-section' id='Python_logical_operators'>
+        <header>Python logical operators</header>
+        <p>Sometimes, you may want to check multiple conditions at the same time. To do so, you use logical operators.</p>
+        <p>Python has three logical operators:</p>
+        <ul>
+          <li><span class='red'>and</span> - checks whether two conditions are both True simultaneously</li>
+          <li><span class='red'>or</span> - checks multiple conditions and returns True when either or both individual conditions are True</li>
+          <li><span class='red'>not</span> - applies to one condition and reverses the result of that condition, True becomes False and False becomes True</li>
+        </ul>
+        <p></p>
+      </section>
+
+
+      <section class='main-section' id='Reference'>
+        <header>Reference</header>
+        <p>This website was made as a web design demonstration, for a <a href='https://www.freecodecamp.org' target="_blank">freeCodeCamp</a> project.</p>
+        <p>All the documentation and code examples in this page was taken from <a href='https://www.pythontutorial.net/' target="_blank">Python Tutorial</a> with the intention to be used only as a generic text for this documentation page project.</p>
+      </section>
+
+      </div>
+    </main>
+  </body>
+</html>
